@@ -22,7 +22,7 @@ def load_image(file):
     return Image.open(file)
 def image_path(root, basename, extension):
     return os.path.join(root, f'{basename}{extension}')
-os.listdir('../input/hsgs-hackathon2022/train_data/Train_labels')
+
 class CustomImageDataset(Dataset):
     def __init__(self, img_dir, label_dir, transform=transform):
         video_files = os.listdir(img_dir)
@@ -67,8 +67,8 @@ num_epochs = 200
 # Load Data
 
 dataset = CustomImageDataset(
-    img_dir='../input/hsgs-hackathon2022/train_data/Train',
-    label_dir='../input/hsgs-hackathon2022/train_data/Train_labels'
+    img_dir='../home/phuonghd/hsgs-hackathon2022/train_data/Train',
+    label_dir='../home/phuonghd/hsgs-hackathon2022/train_data/Train_labels'
 )
 # Dataset is actually a lot larger ~25k images, just took out 10 pictures
 # to upload to Github. It's enough to understand the structure and scale
